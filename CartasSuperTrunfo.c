@@ -10,12 +10,16 @@ int main() {
   printf("Estado: ",estado1);
   scanf("%s",&estado1);
 
+  print("Código: ",codigo1);
+  scanf("%s",&codigo1);
+
   printf("Cidade: ",cidade1);
-  scanf("%s",&,cidade1);
+  scanf("%s",&cidade1);
 
 
   printf("Estado: %s\n",estado1);
-  printf("Cidade: ")
+  printf("Código: %s\n",codigo1);
+  printf("Cidade: %s\n",cidade1);
 
 
 
