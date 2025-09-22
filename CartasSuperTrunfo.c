@@ -7,13 +7,13 @@ int main() {
   char codigo1[50];
   char cidade1[50];
 
-  printf("Estado: ",estado1);
+  printf("Estado: ");
   scanf("%s",&estado1);
 
-  print("Código: ",codigo1);
+  print("Código: ");
   scanf("%s",&codigo1);
 
-  printf("Cidade: ",cidade1);
+  printf("Cidade: ");
   scanf("%s",&cidade1);
 
 
