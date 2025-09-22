@@ -2,7 +2,6 @@
 
 int main() {
 
-  //Carta1
   char estado1[50];
   char codigo1[50];
   char cidade1[50];
