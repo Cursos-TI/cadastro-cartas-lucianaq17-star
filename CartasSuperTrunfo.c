@@ -22,7 +22,7 @@ int main() {
   printf("Estado: %s\n",estado1);
   //printf("Código: %s\n",codigo1);
   //printf("Cidade: %s\n",cidade1);
-  printf("Populção: %d\n");
+  printf("Populção: %d\n",populacao1);
 
 
 
