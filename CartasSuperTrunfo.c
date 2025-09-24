@@ -2,10 +2,9 @@
 
 int main() {
 
-  char estado1[50];
-  //char cidade1[50];
-  int populacao1, municipios1
-  float pib1; area1;
+  char estado1 [50];
+  int populacao1, municipios1;
+  float pib1, area1;
 
 
   printf("Estado: ");
@@ -15,7 +14,7 @@ int main() {
   scanf("%f",&area1);
 
   printf("Pib: ");
-  scanf("%s",&pib1);
+  scanf("%f",&pib1);
 
   printf("População: ");
   scanf("%d",&populacao1);
@@ -25,12 +24,9 @@ int main() {
 
   printf("Estado: %s\n",estado1);
   printf("Área: %f\n",area1);
-  //printf("Cidade: %s\n",cidade1);
+  printf("Pib: %f\n",pib1);
   printf("População: %d\n",populacao1);
   printf("Municípios: %d\n",municipios1);
-
-
-
 
 
 return 0;
