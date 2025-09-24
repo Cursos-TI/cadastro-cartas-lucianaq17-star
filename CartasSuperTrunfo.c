@@ -8,9 +8,9 @@ int main() {
 
 
   printf("Estado: ");
-  scanf("%s",&estado1);
+  scanf("%s",estado1);
 
-  print("Área: ");
+  printf("Área: ");
   scanf("%f",&area1);
 
   printf("Pib: ");
