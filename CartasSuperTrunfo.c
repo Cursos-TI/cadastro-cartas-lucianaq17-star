@@ -4,7 +4,7 @@ int main() {
   
 char estado1 [50];
 int populacao1, municipios1;
-float pibl, areal;
+float pib1, area1;
 
 printf("Estado: ");
 scanf("%s", estado1);
