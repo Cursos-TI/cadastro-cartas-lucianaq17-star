@@ -2,9 +2,10 @@
 
 int main() {
   
-char estado1 [50], cidade1[50],estado2[50], cidade2[50];
-int populacao1, municipios1, populacao2,municipios2;
+char estado1 [50], codigo1 [50],cidade1 [50], estado2[50], codigo2[50], cidade2 [50];
+int populacao1, pontos1, populacao2, pontos2;
 float pib1, area1, pib2, area2;
+float densidade1, densidade2, percapita1, percapita2;
 
 //Entrada dados carta 1
 printf("Digite Dados da Carta 1 \n");
@@ -15,17 +16,21 @@ scanf("%s", estado1);
 printf("Cidade: ");
 scanf("%s",cidade1);
 
+printf("Código: ");
+scanf("%s",codigo1);
+
+printf("População: ");
+scanf("%d", &populacao1);
+
 printf("Área: ");
 scanf("%f",&area1);
 
 printf("Pib: ");
 scanf("%f",&pib1);
 
-printf("População: ");
-scanf("%d", &populacao1);
+printf("Pontos Turísticos: ");
+scanf("%d", &pontos1);
 
-printf("Municípios: ");
-scanf("%d", &municipios1);
 
 //Entrada dados carta 2
 printf("\nDigite Dados da Carta 2 \n");
@@ -36,35 +41,53 @@ scanf("%s", estado2);
 printf("Cidade: ");
 scanf("%s",cidade2);
 
+printf("Código: ");
+scanf("%s",codigo2);
+
+printf("População: ");
+scanf("%d", &populacao2);
+
 printf("Área: ");
 scanf("%f",&area2);
 
 printf("Pib: ");
 scanf("%f",&pib2);
 
-printf("População: ");
-scanf("%d", &populacao2);
+printf("Pontos Turísticos: ");
+scanf("%d", &pontos2);
 
-printf("Municípios: ");
-scanf("%d", &municipios2);
+
+//Cálculos Carta 1
+densidade1 = (float) (populacao1/area1);
+percapita1 = (float)(pib1/populacao1);
+
+//Cálculos Carta 2
+densidade2 = (float) (populacao2/area2);
+percapita2 = (float) (pib2/populacao2);
 
 // Saída carta 1
 printf("\nResultado da Carta 1 \n");
 printf("Estado: %s\n", estado1);
 printf("Cidade: %s\n", cidade1);
-printf("Área: %f\n",area1);
-printf("Pib: %f\n",pib1);
+printf("Código: %s\n", codigo1);
 printf("População: %d\n", populacao1);
-printf("Municípios: %d\n", municipios1);
+printf("Área: %.2f Km2\n",area1);
+printf("Pib: %.2f bilhões de reais\n",pib1);
+printf("Pontos Turísticos: %d\n", pontos1);
+printf("Densidade: %.2f hab/Km2\n", densidade1);
+printf("Pib Per Capita: %.2f reais\n", percapita1);
 
 //Saída carta 2
 printf("\nResultado da Carta 2 \n");
 printf("Estado: %s\n", estado2);
 printf("Cidade: %s\n",cidade2);
-printf("Área: %f\n",area2);
-printf("Pib: %f\n",pib2);
+printf("Código: %s\n", codigo2);
 printf("População: %d\n", populacao2);
-printf("Municípios: %d\n", municipios2);
+printf("Área: %.2f Km2\n",area2);
+printf("Pib: %.2f bilhões de reais\n",pib2);
+printf("Pontos Turísticos: %d\n", pontos2);
+printf("Densidade: %.2f hab/Km2\n", densidade2);
+printf("Pib Per Capita: %.2f reais\n", percapita2);
 
 
 return 0;
