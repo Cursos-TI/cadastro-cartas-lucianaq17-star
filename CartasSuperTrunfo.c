@@ -3,9 +3,9 @@
 int main() {
   
 char estado1 [50], codigo1 [50],cidade1 [50], estado2[50], codigo2[50], cidade2 [50];
-int populacao1, pontos1, populacao2, pontos2;
-float pib1, area1, pib2, area2;
-float densidade1, densidade2, percapita1, percapita2;
+int pontos1, pontos2;
+float populacao1, pib1, area1, populacao2, pib2, area2;
+float densidade1, percapita1, densidade2, percapita2;
 
 //Entrada dados carta 1
 printf("Digite Dados da Carta 1 \n");
@@ -20,7 +20,7 @@ printf("Código: ");
 scanf("%s",codigo1);
 
 printf("População: ");
-scanf("%d", &populacao1);
+scanf("%f", &populacao1);
 
 printf("Área: ");
 scanf("%f",&area1);
@@ -45,7 +45,7 @@ printf("Código: ");
 scanf("%s",codigo2);
 
 printf("População: ");
-scanf("%d", &populacao2);
+scanf("%f", &populacao2);
 
 printf("Área: ");
 scanf("%f",&area2);
@@ -58,12 +58,12 @@ scanf("%d", &pontos2);
 
 
 //Cálculos Carta 1
-densidade1 = (float) (populacao1/area1);
-percapita1 = (float)(pib1/populacao1);
+densidade1 = (populacao1/area1);
+percapita1 = (pib1/populacao1);
 
 //Cálculos Carta 2
-densidade2 = (float) (populacao2/area2);
-percapita2 = (float) (pib2/populacao2);
+densidade2 = (populacao2/area2);
+percapita2 = (pib2/populacao2);
 
 // Saída carta 1
 printf("\nResultado da Carta 1 \n");
