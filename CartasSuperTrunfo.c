@@ -6,6 +6,9 @@ char estado1 [50], codigo1 [50],cidade1 [50], estado2[50], codigo2[50], cidade2 
 int pontos1, pontos2;
 unsigned long int populacao1, populacao2;
 float pib1, area1, densidade1, percapita1, poder1, pib2, area2, densidade2, percapita2, poder2;
+unsigned long int populacaoresult;
+float arearesult, pibresult, densidaderesult, percapitaresult, poderresult;
+int pontosresult;
 
 //Entrada dados carta 1
 printf("Digite Dados da Carta 1 \n");
@@ -59,14 +62,14 @@ scanf("%d", &pontos2);
 
 //Cálculos Carta 1
 densidade1 = populacao1/area1;
-percapita1 = pib1/populacao1*1000000000;
-poder1 = populacao1 + area1 + pib1 + pontos1 + percapita1 - densidade1;
+percapita1 = pib1/populacao1;
+poder1 = populacao1 + area1 + pib1 + pontos1 + percapita1 + 1/densidade1;
 
 
 //Cálculos Carta 2
 densidade2 = populacao2/area2;
-percapita2 = pib2/populacao2*1000000000;
-poder2 = populacao2 + area2 + pib2 + pontos2 + percapita2 - densidade2;
+percapita2 = pib2/populacao2;
+poder2 = populacao2 + area2 + pib2 + pontos2 + percapita2 +1/densidade2;
 
 // Saída carta 1
 printf("\nResultado da Carta 1 \n");
@@ -75,7 +78,7 @@ printf("Cidade: %s\n", cidade1);
 printf("Código: %s\n", codigo1);
 printf("População: %d\n", populacao1);
 printf("Área: %.2f Km2\n",area1);
-printf("Pib: %.2f bilhões de reais\n",pib1);
+printf("Pib: %.2f reais\n",pib1);
 printf("Pontos Turísticos: %d\n", pontos1);
 printf("Densidade: %.2f hab/Km2\n", densidade1);
 printf("Pib Per Capita: %.2f reais\n", percapita1);
@@ -89,15 +92,35 @@ printf("Cidade: %s\n",cidade2);
 printf("Código: %s\n", codigo2);
 printf("População: %d\n", populacao2);
 printf("Área: %.2f Km2\n",area2);
-printf("Pib: %.2f bilhões de reais\n",pib2);
+printf("Pib: %.2f reais\n",pib2);
 printf("Pontos Turísticos: %d\n", pontos2);
 printf("Densidade: %.2f hab/Km2\n", densidade2);
 printf("Pib Per Capita: %.2f reais\n", percapita2);
 printf("Poder da Carta 2: %.2f\n", poder2);
 
 //Comparação de cartas
-//printf("\nComparação de cartas \n");
-//printf("População: ");
+printf("\nResultado da Batalha \n");
+populacaoresult = populacao1 > populacao2;
+printf("População: ") ? printf("Carta 1 venceu\n") : populacao1 < populacao2 ? printf("Carta 2 venceu\n") : printf("Empate\n");
+
+arearesult = area1 > area2;
+printf("Área: ") ? ("Carta 1 venceu\n") : area1 < area2 ? printf("Carta 2 venceu\n") : printf("Empate\n");
+
+pibresult = pib1 > pib2;
+printf("Pib: ") ? printf("Carta 1 venceu\n") : pib1 < pib2 ? printf("Carta 2 venceu\n") : printf("Empate\n");
+
+pontosresult = pontos1 > pontos2;
+printf("Pontos Turísticos: ") ? printf ("Carta 1 venceu\n") : pontos1 < pontos2 ? printf("Carta 2 venceu\n") : printf("Empate\n");
+
+densidaderesult = densidade1 > densidade2;
+printf("Densidade: ") ? printf("Carta 2 venceu\n") : densidade1 < densidade2 ? printf("Carta 1 venceu\n") : printf("Empate\n");
+
+percapitaresult = percapita1 > percapita2;
+printf("Pib Per Capita: ") ? printf("Carta 1 venceu\n") : percapita1 < percapita2 ? printf("Carta 2 venceu\n") : printf("Empate\n");
+
+poderresult = poder1 > poder2;
+printf("Poder: ") ? printf("Carta 1 venceu\n") : poder1 < poder2 ? printf("Carta 2 venceu\n") : printf("Empate\n");
+
 
 
 return 0;
