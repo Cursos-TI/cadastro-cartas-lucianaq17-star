@@ -4,8 +4,8 @@ int main() {
   
 char estado1 [50], codigo1 [50],cidade1 [50], estado2[50], codigo2[50], cidade2 [50];
 int pontos1, pontos2;
-float populacao1, pib1, area1, populacao2, pib2, area2;
-float densidade1, percapita1, densidade2, percapita2;
+float populacao1, populacao2;
+float pib1, area1, densidade1, percapita1, pib2, area2, densidade2, percapita2;
 
 //Entrada dados carta 1
 printf("Digite Dados da Carta 1 \n");
